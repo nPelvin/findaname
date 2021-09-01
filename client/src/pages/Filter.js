@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import NameDeux from "./Name";
 
-const Filter = () => {
+const Filter = ({ gender, names }) => {
 	const [searchInput, setSearchInput] = useState("");
 
 	function handleSearchInput(event) {
 		setSearchInput(event.target.value);
 	}
+
+  console.log("filterNames", names)
+
 
 	return (
 		<div>
@@ -20,16 +23,9 @@ const Filter = () => {
 						id="babyName"
 						placeholder="Baby name"
 					/>
-					<Link
-						to={{
-							pathname: "/gender",
-							searchRes: searchInput,
-						}}
-					>
-						<button>Submit</button>
-					</Link>
 				</div>
 			</form>
+			<NameDeux filter={searchInput} gender={gender} names={names} />
 		</div>
 	);
 };

@@ -48,6 +48,11 @@
   background-color: lightpink;
   margin: 3px;
 }
+.neutral
+{
+  background-color: yellow;
+  margin: 3px;
+}
 
 @keyframes App-logo-spin {
   from {

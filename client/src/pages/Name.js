@@ -1,22 +1,32 @@
 import React from "react";
-// import Names from "./Names";
 
-const Name = ({ data, filter, gender }) => {
-  console.log(filter, gender);
-  return (
-    <div className="wrapper">
-      {data
-        .filter((f) => f.name.includes(filter) || filter === "")
-        .filter((f) => f.sex.includes(gender))
-        // .filter((f) => f.sex.includes("f"))
-        .map((data) => (
-          <div>
-            {data.sex === "f" && <button className="girl">{data.name}</button>}
-            {data.sex === "m" && <button className="boy">{data.name}</button>}
-          </div>
-        ))}
-    </div>
-  );
-};
+function Name({ names, filter, gender }) {
+	return (
+		<div>
+			{names
+				.filter((f) => f.name.includes(filter) || filter === "")
+				.filter((f) => f.gender.includes(gender))
+				.map((names) =>
+					names.gender === "mf" ? (
+						<button key={name.id} className="neutral">
+							{names.name}
+						</button>
+					) : names.gender === "fm" ? (
+						<button key={name.id} className="neutral">
+							{names.name}
+						</button>
+					) : names.gender === "f" ? (
+						<button key={name.id} className="girl">
+							{names.name}
+						</button>
+					) : (
+						<button key={name.id} className="boy">
+							{names.name}
+						</button>
+					)
+				)}
+		</div>
+	);
+}
 
 export default Name;
