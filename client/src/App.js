@@ -1,17 +1,12 @@
-import { Route, Switch } from "react-router-dom";
+import Gender from "./pages/Gender"
+import "./App.css";
 
-import About from "./pages/About";
-import Home from "./pages/Home";
-
-const App = () => (
-	<Switch>
-		<Route path="/" exact>
-			<Home />
-		</Route>
-		<Route path="/about/this/site">
-			<About />
-		</Route>
-	</Switch>
-);
+function App() {
+	return (
+		<div className="App">
+			<Gender />
+		</div>
+	);
+}
 
 export default App;
