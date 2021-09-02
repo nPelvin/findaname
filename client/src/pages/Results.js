@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import Favourites from "./Favourites";
 import Filter from "./Filter";
 
-function Gender(props) {
+function Results(props) {
 
 const [api, setApi] = useState(`/api/search/${props.location.searchRes}`);
 const [gender, setGender] = useState("");
 const [names, setNames] = useState([]);
-console.log("api",api);
-console.log("search", props.location);
+const [favourites, setFavourites] = useState([]);
+
 
 	useEffect(() => {
 		fetch(api)
@@ -17,8 +18,6 @@ console.log("search", props.location);
 			})
 	}, []);
 
-console.log("api", api);
-console.log("names", names);
 
 function toggleMale() {
   setGender("m");
@@ -44,10 +43,16 @@ function toggleNeutral() {
 				<button onClick={toggleNeutral} style={{ backgroundColor: "yellow" }}>
 					Both
 				</button>
-				<Filter gender={gender} names={names} />
-		
+				<Filter
+					gender={gender}
+					names={names}
+					favourites={favourites}
+					setFavourites={setFavourites}
+				/>
+				{favourites !== [] ? <Favourites favourites={favourites} /> : null}
+				
 			</div>
 		);
 }
 
-export default Gender;
+export default Results;

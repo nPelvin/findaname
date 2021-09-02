@@ -1,6 +1,6 @@
 import React from "react";
 
-function Name({ names, filter, gender }) {
+function Name({ names, filter, gender, favourites, setFavourites }) {
 	return (
 		<div>
 			{names
@@ -8,19 +8,51 @@ function Name({ names, filter, gender }) {
 				.filter((f) => f.gender.includes(gender))
 				.map((names) =>
 					names.gender === "mf" ? (
-						<button key={name.id} className="neutral">
+						<button
+							onClick={() => {
+								setFavourites(favourites.concat(names));
+								// localStorage.setItem("names", JSON.stringify(favourites));
+								// console.log(JSON.parse(localStorage.getItem("names")));
+							}}
+							key={names.id}
+							className="neutral"
+						>
 							{names.name}
 						</button>
 					) : names.gender === "fm" ? (
-						<button key={name.id} className="neutral">
+						<button
+							onClick={() => {
+								setFavourites(favourites.concat(names));
+								// localStorage.setItem("names", JSON.stringify(favourites));
+								// console.log(JSON.parse(localStorage.getItem("names")));
+							}}
+							key={names.id}
+							className="neutral"
+						>
 							{names.name}
 						</button>
 					) : names.gender === "f" ? (
-						<button key={name.id} className="girl">
+						<button
+							onClick={() => {
+								setFavourites(favourites.concat(names));
+								// localStorage.setItem("names", JSON.stringify(favourites));
+								// console.log(JSON.parse(localStorage.getItem("names")));
+							}}
+							key={names.id}
+							className="girl"
+						>
 							{names.name}
 						</button>
 					) : (
-						<button key={name.id} className="boy">
+						<button
+							onClick={() => {
+								setFavourites(favourites.concat(names));
+								// localStorage.setItem("names", JSON.stringify(favourites));
+								// console.log(JSON.parse(localStorage.getItem("names")));
+							}}
+							key={names.id}
+							className="boy"
+						>
 							{names.name}
 						</button>
 					)

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Filter = () => {
+const Search = () => {
 	const [searchInput, setSearchInput] = useState("");
 
 	function handleSearchInput(event) {
 		setSearchInput(event.target.value);
 	}
-
 	return (
 		<div>
 			<form>
@@ -22,7 +21,7 @@ const Filter = () => {
 					/>
 					<Link
 						to={{
-							pathname: "/gender",
+							pathname: "/results",
 							searchRes: searchInput,
 						}}
 					>
@@ -34,4 +33,4 @@ const Filter = () => {
 	);
 };
 
-export default Filter;
+export default Search;

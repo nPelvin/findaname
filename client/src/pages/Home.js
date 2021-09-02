@@ -26,12 +26,10 @@ export function Home() {
 	return (
 		<main role="main">
 			<div>
-
 				<h1 className="message" data-qa="message">
 					{message}
 				</h1>
 				<Search />
-				<Link to="/gender">List of Names</Link>
 			</div>
 		</main>
 	);

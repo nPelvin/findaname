@@ -1,31 +1,29 @@
 import React, { useState } from "react";
-import NameDeux from "./Name";
+import Name from "./Name";
 
-const Filter = ({ gender, names }) => {
+const Filter = ({ gender, names, favourites, setFavourites }) => {
 	const [searchInput, setSearchInput] = useState("");
+
 
 	function handleSearchInput(event) {
 		setSearchInput(event.target.value);
 	}
 
-  console.log("filterNames", names)
-
-
 	return (
 		<div>
 			<form>
-				<label htmlFor="babyName">Baby name</label>
+				<label htmlFor="babyName">Filter:</label>
 				<div className="search-row">
 					<input
 						value={searchInput}
 						onChange={handleSearchInput}
 						type="text"
 						id="babyName"
-						placeholder="Baby name"
+						placeholder="Filter results"
 					/>
 				</div>
 			</form>
-			<NameDeux filter={searchInput} gender={gender} names={names} />
+			<Name filter={searchInput} gender={gender} names={names} favourites={favourites} setFavourites={setFavourites} />
 		</div>
 	);
 };
