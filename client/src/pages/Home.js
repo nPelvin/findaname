@@ -34,5 +34,4 @@ export function Home() {
 		</main>
 	);
 }
-
 export default Home;

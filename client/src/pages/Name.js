@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addName, selectCount } from "../features/counter/counterSlice";
 
 function Name({ names, filter, gender, favourites, setFavourites }) {
+	const count = useSelector(selectCount);
+	const dispatch = useDispatch();
+	const [incrementAmount, setIncrementAmount] = useState("");
+	const incrementValue = incrementAmount || "";
+
 	return (
 		<div>
 			{names
@@ -10,7 +17,7 @@ function Name({ names, filter, gender, favourites, setFavourites }) {
 					names.gender === "mf" ? (
 						<button
 							onClick={() => {
-								setFavourites(favourites.concat(names));
+								dispatch(addName(names));
 								// localStorage.setItem("names", JSON.stringify(favourites));
 								// console.log(JSON.parse(localStorage.getItem("names")));
 							}}
@@ -22,7 +29,7 @@ function Name({ names, filter, gender, favourites, setFavourites }) {
 					) : names.gender === "fm" ? (
 						<button
 							onClick={() => {
-								setFavourites(favourites.concat(names));
+								dispatch(addName(names));
 								// localStorage.setItem("names", JSON.stringify(favourites));
 								// console.log(JSON.parse(localStorage.getItem("names")));
 							}}
@@ -34,7 +41,7 @@ function Name({ names, filter, gender, favourites, setFavourites }) {
 					) : names.gender === "f" ? (
 						<button
 							onClick={() => {
-								setFavourites(favourites.concat(names));
+								dispatch(addName(names));
 								// localStorage.setItem("names", JSON.stringify(favourites));
 								// console.log(JSON.parse(localStorage.getItem("names")));
 							}}
@@ -46,7 +53,7 @@ function Name({ names, filter, gender, favourites, setFavourites }) {
 					) : (
 						<button
 							onClick={() => {
-								setFavourites(favourites.concat(names));
+								dispatch(addName(names));
 								// localStorage.setItem("names", JSON.stringify(favourites));
 								// console.log(JSON.parse(localStorage.getItem("names")));
 							}}
