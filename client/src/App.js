@@ -13,9 +13,9 @@ function App() {
 	return (
 		<div className="App">
 			{" "}
-			{/* <Header /> */}
+			<Header />
 			<header> </header>
-			<img src={logo} className="App-logo" alt="logo" />
+			{/* <img src={logo} className="App-logo" alt="logo" /> */}
 			<br />
 			<Switch>
 				<Route path="/" component={Home} exact></Route>

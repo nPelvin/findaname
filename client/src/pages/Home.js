@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Search from "./Search";
-
 import "./Home.css";
+import Favourites from "./Favourites";
+import girls from "../pages/TopGirls.json";
+import boys from "../pages/TopBoys.json";
 
 export function Home() {
 	const [message, setMessage] = useState("Loading...");
+
+	console.log("Top Boys",boys);
 
 	useEffect(() => {
 		fetch("/api")
@@ -31,6 +35,8 @@ export function Home() {
 				</h1>
 				<Search />
 			</div>
+			<br />
+			<Favourites />
 		</main>
 	);
 }

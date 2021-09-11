@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Favourites from "./Favourites";
 import Filter from "./Filter";
+import Search from "./Search";
 
 function Results(props) {
 	const [api, setApi] = useState(`/api/search/${props.location.searchRes}`);

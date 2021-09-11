@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Name from "./Name";
 
 const Filter = ({ gender, names, favourites, setFavourites }) => {
@@ -12,8 +13,8 @@ const Filter = ({ gender, names, favourites, setFavourites }) => {
 	return (
 		<div>
 			<form>
-				<label htmlFor="babyName">Filter:</label>
 				<div className="search-row">
+					{/* <label htmlFor="babyName">Filter: </label> */}
 					<input
 						value={searchInput}
 						onChange={handleSearchInput}
@@ -21,9 +22,24 @@ const Filter = ({ gender, names, favourites, setFavourites }) => {
 						id="babyName"
 						placeholder="Filter results"
 					/>
+
+					{" or "}
+					<Link
+						to={{
+							pathname: "/",
+						}}
+					>
+						search again
+					</Link>
 				</div>
 			</form>
-			<Name filter={searchInput} gender={gender} names={names} favourites={favourites} setFavourites={setFavourites} />
+			<Name
+				filter={searchInput}
+				gender={gender}
+				names={names}
+				favourites={favourites}
+				setFavourites={setFavourites}
+			/>
 		</div>
 	);
 };
