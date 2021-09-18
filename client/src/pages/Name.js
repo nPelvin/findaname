@@ -42,8 +42,6 @@ function Name({ names, filter, gender, favourites, setFavourites }) {
 						<button
 							onClick={() => {
 								dispatch(addName(names));
-								// localStorage.setItem("names", JSON.stringify(favourites));
-								// console.log(JSON.parse(localStorage.getItem("names")));
 							}}
 							key={names.id}
 							className="girl"

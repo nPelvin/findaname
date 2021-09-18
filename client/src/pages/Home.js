@@ -5,12 +5,11 @@ import "./Home.css";
 import Favourites from "./Favourites";
 import girls from "../pages/TopGirls.json";
 import boys from "../pages/TopBoys.json";
+import TopGirls from "./TopGirls";
+import TopBoys from "./TopBoys";
 
 export function Home() {
 	const [message, setMessage] = useState("Loading...");
-
-	console.log("Top Boys",boys);
-
 	useEffect(() => {
 		fetch("/api")
 			.then((res) => {
@@ -37,6 +36,8 @@ export function Home() {
 			</div>
 			<br />
 			<Favourites />
+			<TopGirls girls={girls} />
+			<TopBoys boys={boys} />
 		</main>
 	);
 }
