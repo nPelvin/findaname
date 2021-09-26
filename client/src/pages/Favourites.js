@@ -59,10 +59,10 @@ function Favourites() {
 			<br />
 			<br />
 			Click names you like to add to your favourites.
-			<ButtonMailto
+			{/* <ButtonMailto
 				label="Write me an E-Mail"
 				mailto="mailto:no-reply@example.com"
-			/>
+			/> */}
 		</div>
 	);
 }

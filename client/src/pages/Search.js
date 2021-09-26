@@ -9,9 +9,9 @@ const Search = () => {
 		setSearchInput(event.target.value);
 	}
 	return (
-		<div><a href="mailto:me@me.com">email me here! Click this</a>
+		<div>
 			<form>
-				{/* <label htmlFor="babyName">Search for a name:</label> */}
+				{/* this should be replaced perhaps with screen reader only <label htmlFor="babyName">Search for a name:</label> */}
 				<div className="search-row">
 					<input
 						value={searchInput}
