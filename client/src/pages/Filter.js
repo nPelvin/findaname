@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Name from "./Name";
+import Favourites from "./Favourites";
 
 const Filter = ({ gender, names, favourites, setFavourites }) => {
 	const [searchInput, setSearchInput] = useState("");
@@ -40,6 +41,8 @@ const Filter = ({ gender, names, favourites, setFavourites }) => {
 				favourites={favourites}
 				setFavourites={setFavourites}
 			/>
+			<br />
+			<Favourites />
 		</div>
 	);
 };

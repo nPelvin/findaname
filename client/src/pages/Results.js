@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Favourites from "./Favourites";
 import Filter from "./Filter";
-import Search from "./Search";
 
 function Results(props) {
 	const [api, setApi] = useState(`/api/search/${props.location.searchRes}`);
@@ -29,15 +27,18 @@ function Results(props) {
 
 	return (
 		<div>
+			Filter:{" "}
 			<button onClick={toggleMale} style={{ backgroundColor: "lightskyblue" }}>
 				Male
-			</button>
+			</button>{" "}
 			<button onClick={toggleFemale} style={{ backgroundColor: "pink" }}>
 				Female
-			</button>
+			</button>{" "}
 			<button onClick={toggleNeutral} style={{ backgroundColor: "yellow" }}>
 				Both
 			</button>
+			<br />
+			<br />
 			<Filter
 				gender={gender}
 				names={names}
@@ -45,8 +46,8 @@ function Results(props) {
 				setFavourites={setFavourites}
 			/>
 			<br />
-			{favourites !== [] ? <Favourites favourites={favourites} /> : null}
-			<br />
+			{/* {favourites !== [] ? <Favourites favourites={favourites} /> : null}
+			<br /> */}
 		</div>
 	);
 }

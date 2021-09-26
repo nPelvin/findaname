@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Favourites from "./Favourites";
 
 const Search = () => {
 	const [searchInput, setSearchInput] = useState("");
@@ -8,16 +9,16 @@ const Search = () => {
 		setSearchInput(event.target.value);
 	}
 	return (
-		<div>
+		<div><a href="mailto:me@me.com">email me here! Click this</a>
 			<form>
-				<label htmlFor="babyName">Baby name</label>
+				{/* <label htmlFor="babyName">Search for a name:</label> */}
 				<div className="search-row">
 					<input
 						value={searchInput}
 						onChange={handleSearchInput}
 						type="text"
 						id="babyName"
-						placeholder="Find a name"
+						placeholder="Search for a name"
 					/>
 					<Link
 						to={{
@@ -29,6 +30,8 @@ const Search = () => {
 					</Link>
 				</div>
 			</form>
+			<br />
+			<Favourites />
 		</div>
 	);
 };

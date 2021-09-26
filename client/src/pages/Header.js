@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "./logo.png";
 function Header() {
 	return (
-		<div>
+		<div className="header">
 			<Link
 				to={{
 					pathname: "/",

@@ -3,9 +3,6 @@ import Header from "./pages/Header";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Filter from "./pages/Filter";
-import Footer from "./pages/Footer";
-import logo from "./logo.png";
-import { AddName } from "./features/favourites/AddName";
 import "./App.css";
 
 function App() {

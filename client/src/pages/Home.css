@@ -4,6 +4,18 @@
 	justify-content: space-evenly;
 }
 
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
 .card {
 	padding: 1em;
 }
