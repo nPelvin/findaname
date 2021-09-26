@@ -5,7 +5,7 @@ import { addName } from "../features/counter/counterSlice";
 function TopGirls({ girls }) {
     const dispatch = useDispatch();
     return (
-			<div>
+			<div className="card">
 				<h1>Top Girls Names</h1>
 				{girls.map((list) => (
 					<button

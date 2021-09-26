@@ -22,7 +22,7 @@ function App() {
 				<Route path="/results" component={Results}></Route>
 				<Route path="/filter" component={Filter}></Route>
 			</Switch>
-			<AddName />
+			{/* <AddName /> */}
 			{/* <Footer /> */}
 		</div>
 	);

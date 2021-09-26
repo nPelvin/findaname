@@ -36,8 +36,11 @@ export function Home() {
 			</div>
 			<br />
 			<Favourites />
-			<TopGirls girls={girls} />
-			<TopBoys boys={boys} />
+			<div className="row">
+				{" "}
+				<TopGirls girls={girls} />
+				<TopBoys boys={boys} />
+			</div>
 		</main>
 	);
 }

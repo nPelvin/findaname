@@ -1,3 +1,13 @@
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.card {
+	padding: 1em;
+}
+
 .logo {
 	width: 100px;
 }
