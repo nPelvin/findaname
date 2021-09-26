@@ -5,8 +5,7 @@ import Results from "./pages/Results";
 import Filter from "./pages/Filter";
 import Footer from "./pages/Footer";
 import logo from "./logo.png";
-import { AddName } from "./features/counter/AddName";
-import { FavouritesRedux } from "./features/counter/FavouritesRedux";
+import { AddName } from "./features/favourites/AddName";
 import "./App.css";
 
 function App() {

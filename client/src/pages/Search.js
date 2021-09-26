@@ -17,7 +17,7 @@ const Search = () => {
 						onChange={handleSearchInput}
 						type="text"
 						id="babyName"
-						placeholder="Baby name"
+						placeholder="Find a name"
 					/>
 					<Link
 						to={{

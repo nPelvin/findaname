@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addName, selectCount } from "../features/counter/counterSlice";
+import { addName, selectCount } from "../features/favourites/counterSlice";
 
 function Name({ names, filter, gender, favourites, setFavourites }) {
 	const count = useSelector(selectCount);

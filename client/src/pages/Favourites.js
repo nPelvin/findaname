@@ -1,39 +1,63 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCount } from "../features/counter/counterSlice";
+import { selectCount, deleteName } from "../features/favourites/counterSlice";
 
-function Favourites({ favourites }) {
-	console.log(favourites);
-	const count = useSelector(selectCount);
+function Favourites() {
+	const favourite = useSelector(selectCount);
 	const dispatch = useDispatch();
 	return (
 		<div>
 			Favourites:
-			{count.map((names, index) =>
+			{favourite.map((names, index) =>
 				names.gender === "mf" ? (
-					<button key={names.id} className="neutral">
-						{names.name}
+					<button
+						key={names.id}
+						className="neutral"
+						onClick={() => {
+							dispatch(deleteName(names));
+							console.log("clicked", names);
+						}}
+					>
+						{names.name} {" x"}
 					</button>
 				) : names.gender === "fm" ? (
-					<button key={names.id} className="neutral">
+					<button
+						key={names.id}
+						className="neutral"
+						onClick={() => {
+							dispatch(deleteName(names));
+							console.log("clicked", names);
+						}}
+					>
 						{names.name}
 					</button>
 				) : names.gender === "f" ? (
-					<button key={names.id} className="girl">
+					<button
+						key={names.id}
+						className="girl"
+						onClick={() => {
+							dispatch(deleteName(names));
+							console.log("clicked", names);
+						}}
+					>
 						{names.name}
 					</button>
 				) : (
 					<button
 						key={names.id}
 						className="boy"
-						onClick={() => console.log(names)}
+						onClick={() => {
+							dispatch(deleteName(names));
+							console.log("clicked", names);
+						}}
 					>
 						{names.name}
 					</button>
 				)
 			)}
 			<br />
-			Click name again to delete from Favourites
+			<br />
+			Click names you like to add to your favourites.
 		</div>
 	);
 }

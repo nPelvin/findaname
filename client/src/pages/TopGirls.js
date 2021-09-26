@@ -1,15 +1,15 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
-import { addName } from "../features/counter/counterSlice";
+import { addName } from "../features/favourites/counterSlice";
 
 function TopGirls({ girls }) {
     const dispatch = useDispatch();
     return (
 			<div className="card">
-				<h1>Top Girls Names</h1>
-				{girls.map((list) => (
+				<h2>Top Girls Names</h2>
+				{girls.map((list, index) => (
 					<button
-						key={list.id}
+						key={index}
 						className="girl"
 						onClick={() => {
 							dispatch(addName(list));
