@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCount, deleteName } from "../features/favourites/counterSlice";
-import ButtonMailto from "./ButtonMailto";
 
 function Favourites() {
 	const favourite = useSelector(selectCount);
@@ -59,11 +58,7 @@ function Favourites() {
 			<br />
 			<br />
 			Click names you like to add to your favourites.
-			{/* <ButtonMailto
-				label="Write me an E-Mail"
-				mailto="mailto:no-reply@example.com"
-			/> */}
-		</div>
+			</div>
 	);
 }
 

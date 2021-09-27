@@ -11,36 +11,14 @@ function App() {
 			{" "}
 			<Header />
 			<header> </header>
-			{/* <img src={logo} className="App-logo" alt="logo" /> */}
 			<br />
 			<Switch>
 				<Route path="/" component={Home} exact></Route>
 				<Route path="/results" component={Results}></Route>
 				<Route path="/filter" component={Filter}></Route>
 			</Switch>
-			{/* <AddName /> */}
-			{/* <Footer /> */}
 		</div>
 	);
 }
 
 export default App;
-
-// import React from "react";
-// import logo from "./logo.png";
-// import { Counter } from "./features/counter/Counter";
-// import "./App.css";
-
-// function App() {
-// 	return (
-// 		<div className="App">
-// 			<header className="App-header">
-// 				<img src={logo} className="App-logo" alt="logo" />
-// 				<br />
-// 				<Counter />
-// 			</header>
-// 		</div>
-// 	);
-// }
-
-// export default App;

@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import Name from "./Name";
 import Favourites from "./Favourites";
 
-const Filter = ({ gender, names, favourites, setFavourites }) => {
+const Filter = ({ gender, names }) => {
 	const [searchInput, setSearchInput] = useState("");
-
 
 	function handleSearchInput(event) {
 		setSearchInput(event.target.value);
@@ -34,15 +33,16 @@ const Filter = ({ gender, names, favourites, setFavourites }) => {
 					</Link>
 				</div>
 			</form>
+			<br />
+			<Favourites />
+			<br />
+			Returned {names.length} results
+			<br />
 			<Name
 				filter={searchInput}
 				gender={gender}
 				names={names}
-				favourites={favourites}
-				setFavourites={setFavourites}
 			/>
-			<br />
-			<Favourites />
 		</div>
 	);
 };

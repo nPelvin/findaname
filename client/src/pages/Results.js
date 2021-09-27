@@ -5,7 +5,6 @@ function Results(props) {
 	const [api, setApi] = useState(`/api/search/${props.location.searchRes}`);
 	const [gender, setGender] = useState("");
 	const [names, setNames] = useState([]);
-	const [favourites, setFavourites] = useState([]);
 
 	useEffect(() => {
 		fetch(api)
@@ -38,16 +37,9 @@ function Results(props) {
 				Both
 			</button>
 			<br />
+			<br /> 
+			<Filter gender={gender} names={names} />
 			<br />
-			<Filter
-				gender={gender}
-				names={names}
-				favourites={favourites}
-				setFavourites={setFavourites}
-			/>
-			<br />
-			{/* {favourites !== [] ? <Favourites favourites={favourites} /> : null}
-			<br /> */}
 		</div>
 	);
 }

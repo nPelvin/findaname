@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Search from "./Search";
 import "./Home.css";
 import girls from "../pages/TopGirls.json";
