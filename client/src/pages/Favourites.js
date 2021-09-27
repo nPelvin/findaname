@@ -22,7 +22,6 @@ function Favourites() {
 						{
 							<b
 								className="deleteGlyph"
-								style={{ cursor: "pointer" }}
 								onClick={() => {
 									dispatch(deleteName(names));
 								}}
@@ -53,7 +52,6 @@ function Favourites() {
 						{
 							<b
 								className="deleteGlyph"
-								style={{ cursor: "pointer" }}
 								onClick={() => {
 									dispatch(deleteName(names));
 								}}
@@ -84,7 +82,6 @@ function Favourites() {
 						{
 							<b
 								className="deleteGlyph"
-								style={{ cursor: "pointer" }}
 								onClick={() => {
 									dispatch(deleteName(names));
 								}}
@@ -108,7 +105,6 @@ function Favourites() {
 						{
 							<b
 								className="deleteGlyph"
-								style={{ cursor: "pointer" }}
 								onClick={() => {
 									dispatch(deleteName(names));
 								}}
