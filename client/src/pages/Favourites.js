@@ -6,7 +6,7 @@ function Favourites() {
 	const favourite = useSelector(selectCount);
 	const dispatch = useDispatch();
 	return (
-		<div>
+		<div className="favouritesMain">
 			Favourites:
 			{favourite.map((names, index) =>
 				names.gender === "mf" ? (
@@ -18,7 +18,27 @@ function Favourites() {
 							console.log("clicked", names);
 						}}
 					>
-						{names.name} {" x"}
+						{names.name}{" "}
+						{
+							<b
+								className="deleteGlyph"
+								style={{ cursor: "pointer" }}
+								onClick={() => {
+									dispatch(deleteName(names));
+								}}
+								onKeyDown={(e) => {
+									if (e.keyCode == 9) {
+										e.preventDefault;
+										return;
+									}
+									dispatch(deleteName(names));
+								}}
+								role="button"
+								tabIndex={0}
+							>
+								x
+							</b>
+						}
 					</button>
 				) : names.gender === "fm" ? (
 					<button
@@ -29,7 +49,27 @@ function Favourites() {
 							console.log("clicked", names);
 						}}
 					>
-						{names.name}
+						{names.name}{" "}
+						{
+							<b
+								className="deleteGlyph"
+								style={{ cursor: "pointer" }}
+								onClick={() => {
+									dispatch(deleteName(names));
+								}}
+								onKeyDown={(e) => {
+									if (e.keyCode == 9) {
+										e.preventDefault;
+										return;
+									}
+									dispatch(deleteName(names));
+								}}
+								role="button"
+								tabIndex={0}
+							>
+								x
+							</b>
+						}
 					</button>
 				) : names.gender === "f" ? (
 					<button
@@ -40,25 +80,58 @@ function Favourites() {
 							console.log("clicked", names);
 						}}
 					>
-						{names.name}
+						{names.name}{" "}
+						{
+							<b
+								className="deleteGlyph"
+								style={{ cursor: "pointer" }}
+								onClick={() => {
+									dispatch(deleteName(names));
+								}}
+								onKeyDown={(e) => {
+									if (e.keyCode == 9) {
+										e.preventDefault;
+										return;
+									}
+									dispatch(deleteName(names));
+								}}
+								role="button"
+								tabIndex={0}
+							>
+								x
+							</b>
+						}
 					</button>
 				) : (
-					<button
-						key={names.id}
-						className="boy"
-						onClick={() => {
-							dispatch(deleteName(names));
-							console.log("clicked", names);
-						}}
-					>
-						{names.name}
+					<button key={names.id} className="boy">
+						{names.name}{" "}
+						{
+							<b
+								className="deleteGlyph"
+								style={{ cursor: "pointer" }}
+								onClick={() => {
+									dispatch(deleteName(names));
+								}}
+								onKeyDown={(e) => {
+									if (e.keyCode == 9) {
+										e.preventDefault;
+										return;
+									}
+									dispatch(deleteName(names));
+								}}
+								role="button"
+								tabIndex={0}
+							>
+								x
+							</b>
+						}
 					</button>
 				)
 			)}
 			<br />
 			<br />
 			Click names you like to add to your favourites.
-			</div>
+		</div>
 	);
 }
 

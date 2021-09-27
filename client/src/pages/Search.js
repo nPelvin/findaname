@@ -26,7 +26,7 @@ const Search = () => {
 							searchRes: searchInput,
 						}}
 					>
-						<button>Submit</button>
+						<button>Search 🔎︎</button>
 					</Link>
 				</div>
 			</form>

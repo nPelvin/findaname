@@ -1,3 +1,13 @@
+.deleteGlyph {
+	cursor: "pointer";
+}
+
+.favouritesMain {
+	border: solid black 1px;
+	margin: 0em 3em;
+	padding: 0.25em
+}
+
 .row {
 	display: flex;
 	flex-direction: row;
