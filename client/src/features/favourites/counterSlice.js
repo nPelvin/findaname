@@ -1,10 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: [],
-  status: 'idle',
+	value: [],
+	status: "idle",
 };
-
 export const counterSlice = createSlice({
 	name: "counter",
 	initialState,
@@ -15,12 +14,10 @@ export const counterSlice = createSlice({
 			state.value = [...state.value, action.payload];
 		},
 		deleteName: (state, action) => {
-			state.value = [...state.value.filter((item) => item.name !== action.payload.name)];
+			state.value = [
+				...state.value.filter((item) => item.name !== action.payload.name),
+			];
 		},
-		// deleteName: (state, action) => ({
-		// 	...state,
-		// 	value: state.value.filter((item) => item !== action.payload),
-		// }),
 	},
 });
 

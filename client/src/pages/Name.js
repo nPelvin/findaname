@@ -1,9 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addName } from "../features/favourites/counterSlice";
+import { selectCount } from "../features/favourites/counterSlice";
 
 function Name({ names, filter, gender }) {
 	const dispatch = useDispatch();
+	const favourite = useSelector(selectCount);
+
 
 	return (
 		<div>
@@ -14,7 +17,9 @@ function Name({ names, filter, gender }) {
 					names.gender === "mf" ? (
 						<button
 							onClick={() => {
-								dispatch(addName(names));
+								favourite.includes(names)
+									? alert(`${names.name} is already in your favourites`)
+									: dispatch(addName(names));
 							}}
 							key={names.id}
 							className="neutral"
@@ -24,7 +29,9 @@ function Name({ names, filter, gender }) {
 					) : names.gender === "fm" ? (
 						<button
 							onClick={() => {
-								dispatch(addName(names));
+								favourite.includes(names)
+									? alert(`${names.name} is already in your favourites`)
+									: dispatch(addName(names));
 							}}
 							key={names.id}
 							className="neutral"
@@ -34,7 +41,9 @@ function Name({ names, filter, gender }) {
 					) : names.gender === "f" ? (
 						<button
 							onClick={() => {
-								dispatch(addName(names));
+								favourite.includes(names)
+									? alert(`${names.name} is already in your favourites`)
+									: dispatch(addName(names));
 							}}
 							key={names.id}
 							className="girl"
@@ -44,7 +53,9 @@ function Name({ names, filter, gender }) {
 					) : (
 						<button
 							onClick={() => {
-								dispatch(addName(names));
+								favourite.includes(names)
+									? alert(`${names.name} is already in your favourites`)
+									: dispatch(addName(names));
 							}}
 							key={names.id}
 							className="boy"

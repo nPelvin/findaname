@@ -1,9 +1,11 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addName } from "../features/favourites/counterSlice";
+import { selectCount } from "../features/favourites/counterSlice";
 
 function TopBoys({ boys }) {
     const dispatch = useDispatch();
+	const favourite = useSelector(selectCount);
 	return (
 		<div className="card">
 			<h2>Top Boys Names</h2>
@@ -12,7 +14,9 @@ function TopBoys({ boys }) {
 					key={index}
 					className="boy"
 					onClick={() => {
-						dispatch(addName(list));
+						favourite.includes(list)
+							? alert(`${list.name} is already in your favourites`)
+							: dispatch(addName(list));
 					}}
 				>
 					{list.name}

@@ -8,7 +8,7 @@ function Favourites() {
 	return (
 		<div className="favouritesMain">
 			Favourites:
-			{favourite.map((names, index) =>
+			{favourite.map((names) =>
 				names.gender === "mf" ? (
 					<button
 						key={names.id}
