@@ -3,6 +3,7 @@ import Header from "./pages/Header";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Filter from "./pages/Filter";
+import Footer from "./pages/Footer";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 				<Route path="/results" component={Results}></Route>
 				<Route path="/filter" component={Filter}></Route>
 			</Switch>
+			<Footer />
 		</div>
 	);
 }

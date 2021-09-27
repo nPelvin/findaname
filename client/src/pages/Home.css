@@ -1,3 +1,50 @@
+.main {
+	min-height: 80vh;
+}
+
+.results {
+	min-height: 80vh;
+}
+
+.search-row {
+	margin: 2rem;
+}
+
+.wrapper
+{
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3px;
+}
+
+.boy
+{
+  background-color: lightskyblue;
+  margin: 3px;
+}
+.girl
+{
+  background-color: lightpink;
+  margin: 3px;
+}
+.neutral
+{
+  background-color: lightgrey;
+  margin: 3px;
+}
+
+.input {
+	width: 25%;
+	padding: 0.25rem
+}
+.submit {
+	padding: 0.25rem 0.5rem
+}
+
+
 .deleteGlyph {
 	cursor: pointer;
 }

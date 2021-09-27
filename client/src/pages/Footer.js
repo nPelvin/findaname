@@ -4,12 +4,9 @@ import logo from "./logo.png";
 function Footer() {
     return (
 			<div>
-				<img
-					className="logo"
-					data-qa="logo"
-					src={logo}
-					alt="Find a name logo"
-				/>
+				Names provided by{" "}
+				<a href="https://www.behindthename.com/api/">BehindTheName.com</a> under
+				under the Creative Commons Attribution-ShareAlike 4.0 license. 
 			</div>
 		);
 }

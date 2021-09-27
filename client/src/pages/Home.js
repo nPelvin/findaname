@@ -8,7 +8,7 @@ import TopBoys from "./TopBoys";
 export function Home() {
 
 	return (
-		<main role="main">
+		<main role="main" className="main">
 				<div>
 					<Search />
 				</div>

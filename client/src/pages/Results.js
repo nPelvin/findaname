@@ -25,15 +25,15 @@ function Results(props) {
 	}
 
 	return (
-		<div>
+		<div className="results">
 			Filter:{" "}
-			<button onClick={toggleMale} style={{ backgroundColor: "lightskyblue" }}>
+			<button onClick={toggleMale} style={{ backgroundColor: "lightblue" }}>
 				Male
 			</button>{" "}
 			<button onClick={toggleFemale} style={{ backgroundColor: "pink" }}>
 				Female
 			</button>{" "}
-			<button onClick={toggleNeutral} style={{ backgroundColor: "yellow" }}>
+			<button onClick={toggleNeutral} style={{ backgroundColor: "lightgrey" }}>
 				Both
 			</button>
 			<br />

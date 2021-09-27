@@ -14,6 +14,7 @@ const Search = () => {
 				{/* this should be replaced perhaps with screen reader only <label htmlFor="babyName">Search for a name:</label> */}
 				<div className="search-row">
 					<input
+						className="input"
 						value={searchInput}
 						onChange={handleSearchInput}
 						type="text"
@@ -26,7 +27,9 @@ const Search = () => {
 							searchRes: searchInput,
 						}}
 					>
-						<button>Search 🔎︎</button>
+						<button className="submit">
+							Search
+						</button>
 					</Link>
 				</div>
 			</form>
