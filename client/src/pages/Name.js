@@ -18,6 +18,7 @@ function Name({ names, filter, gender }) {
 			{`Returned ${names
 				.filter((f) => f.name.includes(filter) || filter === "")
 				.filter((f) => f.gender.includes(gender)).length} results `}
+				<br />
 				{/* ***Counts results**** */}
 			{names
 				.filter((f) => f.name.includes(filter) || filter === "")
