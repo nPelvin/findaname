@@ -6,30 +6,30 @@ import { selectCount } from "../features/favourites/counterSlice";
 function Name({ names, filter, gender }) {
 	const dispatch = useDispatch();
 	const favourite = useSelector(selectCount);
-	// const handleClick = () => {
-	// 	favourite.includes(names)
-	// 		? alert(`${names.name} is already in your favourites`)
-	// 		: dispatch(addName(names));
-	// };
-
+	const handleClick = (names) => {
+		favourite.includes(names)
+			? alert(`${names.name} is already in your favourites`)
+			: dispatch(addName(names));
+	};
 
 	return (
 		<div>
-			{`Returned ${names
-				.filter((f) => f.name.includes(filter) || filter === "")
-				.filter((f) => f.gender.includes(gender)).length} results `}
-				<br />
-				{/* ***Counts results**** */}
+			{/* ***Counts results**** */}
+			{`Returned ${
+				names
+					.filter((names) => names.name.includes(filter) || filter === "")
+					.filter((names) => names.gender.includes(gender)).length
+			} results `}
+			<br />
+			{/* ***Returns results**** */}
 			{names
-				.filter((f) => f.name.includes(filter) || filter === "")
-				.filter((f) => f.gender.includes(gender))
+				.filter((names) => names.name.includes(filter) || filter === "")
+				.filter((names) => names.gender.includes(gender))
 				.map((names) =>
 					names.gender === "mf" ? (
 						<button
 							onClick={() => {
-								favourite.includes(names)
-									? alert(`${names.name} is already in your favourites`)
-									: dispatch(addName(names));
+								handleClick(names);
 							}}
 							key={names.id}
 							className="neutral"
@@ -39,9 +39,7 @@ function Name({ names, filter, gender }) {
 					) : names.gender === "fm" ? (
 						<button
 							onClick={() => {
-								favourite.includes(names)
-									? alert(`${names.name} is already in your favourites`)
-									: dispatch(addName(names));
+								handleClick(names);
 							}}
 							key={names.id}
 							className="neutral"
@@ -51,9 +49,7 @@ function Name({ names, filter, gender }) {
 					) : names.gender === "f" ? (
 						<button
 							onClick={() => {
-								favourite.includes(names)
-									? alert(`${names.name} is already in your favourites`)
-									: dispatch(addName(names));
+								handleClick(names);
 							}}
 							key={names.id}
 							className="girl"
@@ -63,9 +59,7 @@ function Name({ names, filter, gender }) {
 					) : (
 						<button
 							onClick={() => {
-								favourite.includes(names)
-									? alert(`${names.name} is already in your favourites`)
-									: dispatch(addName(names));
+								handleClick(names);
 							}}
 							key={names.id}
 							className="boy"

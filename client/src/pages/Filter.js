@@ -16,6 +16,7 @@ const Filter = ({ gender, names }) => {
 				<div className="search-row">
 					{/* <label htmlFor="babyName">Filter: </label> */}
 					<input
+						className="input"
 						value={searchInput}
 						onChange={handleSearchInput}
 						type="text"
@@ -36,13 +37,8 @@ const Filter = ({ gender, names }) => {
 			<br />
 			<Favourites />
 			<br />
-			{/* Returned {names.length} results */}
 			<br />
-			<Name
-				filter={searchInput}
-				gender={gender}
-				names={names}
-			/>
+			<Name filter={searchInput} gender={gender} names={names} />
 		</div>
 	);
 };

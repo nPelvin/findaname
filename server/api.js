@@ -25,13 +25,4 @@ router.get("/search/:search", function (req, res) {
 		.catch((e) => console.error(e));
 });
 
-router.get("/default", function (req, res) {
-	const search = "bob";
-	// ILike Function returns case insensitive results, love it!
-	pool
-		.query("SELECT * FROM names WHERE name ILIKE '%' || $1 || '%'", [search])
-		.then((result) => res.json(result.rows))
-		.catch((e) => console.error(e));
-});
-
 export default router;
