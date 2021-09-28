@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addName } from "../features/favourites/counterSlice";
-import { selectFav } from "../features/favourites/counterSlice";
+import { addName } from "../features/favourites/favSlice";
+import { selectFav } from "../features/favourites/favSlice";
 
 function TopBoys({ boys }) {
     const dispatch = useDispatch();
