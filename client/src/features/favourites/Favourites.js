@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectFav, deleteName } from "../features/favourites/favSlice";
+import { selectFav, deleteName } from "./favSlice";
 
 function Favourites() {
 	const favourite = useSelector(selectFav);
@@ -126,7 +126,7 @@ function Favourites() {
 			)}
 			<br />
 			<br />
-			Click names you like to add to your favourites.
+			Click names you like to add them to your favourites.
 		</div>
 	);
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Favourites from "./Favourites";
+import Favourites from "../features/favourites/Favourites";
 
 const Search = () => {
 	const [searchInput, setSearchInput] = useState("");

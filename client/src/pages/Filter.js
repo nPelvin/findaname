@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Name from "./Name";
-import Favourites from "./Favourites";
+import Favourites from "../features/favourites/Favourites";
 
 const Filter = ({ gender, names }) => {
 	const [searchInput, setSearchInput] = useState("");

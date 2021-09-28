@@ -6,16 +6,6 @@
 	margin: 2rem;
 }
 
-/* .wrapper
-{
-  background-color: lightgray;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 3px;
-} */
-
 .boy
 {
   background-color: lightskyblue;
@@ -33,9 +23,10 @@
 }
 
 .input {
-	width: 25%;
+	width: 50%;
 	padding: 0.25rem
 }
+
 .submit {
 	padding: 0.25rem 0.5rem
 }
@@ -75,3 +66,17 @@
 .logo {
 	width: 120px;
 }
+@media only screen and (min-width: 600px) {
+.input {
+	width: 35%;
+	padding: 0.25rem
+}
+}
+
+@media only screen and (min-width: 900px) {
+.input {
+	width: 25%;
+	padding: 0.25rem
+}
+}
+
