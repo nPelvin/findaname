@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCount, deleteName } from "../features/favourites/counterSlice";
+import { selectFav, deleteName } from "../features/favourites/counterSlice";
 
 function Favourites() {
-	const favourite = useSelector(selectCount);
+	const favourite = useSelector(selectFav);
 	const dispatch = useDispatch();
 	return (
 		<div className="favouritesMain">

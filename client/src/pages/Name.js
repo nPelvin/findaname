@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addName } from "../features/favourites/counterSlice";
-import { selectCount } from "../features/favourites/counterSlice";
+import { selectFav } from "../features/favourites/counterSlice";
 
 function Name({ names, filter, gender }) {
 	const dispatch = useDispatch();
-	const favourite = useSelector(selectCount);
+	const favourite = useSelector(selectFav);
 	const handleClick = (names) => {
 		favourite.includes(names)
 			? alert(`${names.name} is already in your favourites`)
