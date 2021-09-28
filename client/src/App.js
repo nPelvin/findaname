@@ -10,8 +10,8 @@ function App() {
 	return (
 		<div className="App">
 			{" "}
-			<Header />
 			<header> </header>
+			<Header />
 			<br />
 			<Switch>
 				<Route path="/" component={Home} exact></Route>

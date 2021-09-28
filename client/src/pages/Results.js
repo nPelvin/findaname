@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Filter from "./Filter";
 
 function Results(props) {
-	const [api, setApi] = useState(`/api/search/${props.location.searchRes}`);
+	const api = `/api/search/${props.location.searchRes}`;
 	const [gender, setGender] = useState("");
 	const [names, setNames] = useState([]);
 
@@ -12,7 +12,7 @@ function Results(props) {
 			.then((data) => {
 				setNames(data);
 			});
-	}, []);
+	}, [api]);
 
 	function toggleMale() {
 		setGender("m");
@@ -37,7 +37,7 @@ function Results(props) {
 				Both
 			</button>
 			<br />
-			<br /> 
+			<br />
 			<Filter gender={gender} names={names} />
 			<br />
 		</div>

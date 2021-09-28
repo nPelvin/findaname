@@ -25,4 +25,26 @@ router.get("/search/:search", function (req, res) {
 		.catch((e) => console.error(e));
 });
 
+router.get("/randomboy", function (req, res) {
+	// OFFSET sets the number of rows to skip before selecting a result!
+	pool
+		.query(
+			"SELECT * FROM names WHERE gender='m' OFFSET floor(random()*12249) LIMIT 1;"
+		)
+		.then((result) => res.json(result.rows))
+		.catch((e) => console.error(e));
+});
+
+router.get("/randomgirl", function (req, res) {
+	pool
+		.query(
+			"SELECT * FROM names WHERE gender='f' OFFSET floor(random()*9629) LIMIT 1;"
+		)
+		.then((result) => res.json(result.rows))
+		.catch((e) => console.error(e));
+});
+
+
+
+
 export default router;

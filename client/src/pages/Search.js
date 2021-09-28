@@ -11,7 +11,6 @@ const Search = () => {
 	return (
 		<div>
 			<form>
-				{/* this should be replaced perhaps with screen reader only <label htmlFor="babyName">Search for a name:</label> */}
 				<div className="search-row">
 					<input
 						className="input"
@@ -33,7 +32,6 @@ const Search = () => {
 					</Link>
 				</div>
 			</form>
-			<br />
 			<Favourites />
 		</div>
 	);

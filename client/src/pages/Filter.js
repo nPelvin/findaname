@@ -14,7 +14,6 @@ const Filter = ({ gender, names }) => {
 		<div>
 			<form>
 				<div className="search-row">
-					{/* <label htmlFor="babyName">Filter: </label> */}
 					<input
 						className="input"
 						value={searchInput}
