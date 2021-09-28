@@ -1,8 +1,4 @@
-.main {
-	min-height: 80vh;
-}
-
-.results {
+.main, .results  {
 	min-height: 80vh;
 }
 
@@ -10,7 +6,7 @@
 	margin: 2rem;
 }
 
-.wrapper
+/* .wrapper
 {
   background-color: lightgray;
   display: flex;
@@ -18,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 3px;
-}
+} */
 
 .boy
 {
@@ -43,7 +39,6 @@
 .submit {
 	padding: 0.25rem 0.5rem
 }
-
 
 .deleteGlyph {
 	cursor: pointer;

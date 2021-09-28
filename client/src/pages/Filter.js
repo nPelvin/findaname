@@ -36,7 +36,7 @@ const Filter = ({ gender, names }) => {
 			<br />
 			<Favourites />
 			<br />
-			Returned {names.length} results
+			{/* Returned {names.length} results */}
 			<br />
 			<Name
 				filter={searchInput}

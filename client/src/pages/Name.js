@@ -6,10 +6,19 @@ import { selectCount } from "../features/favourites/counterSlice";
 function Name({ names, filter, gender }) {
 	const dispatch = useDispatch();
 	const favourite = useSelector(selectCount);
+	// const handleClick = () => {
+	// 	favourite.includes(names)
+	// 		? alert(`${names.name} is already in your favourites`)
+	// 		: dispatch(addName(names));
+	// };
 
 
 	return (
 		<div>
+			{`Returned ${names
+				.filter((f) => f.name.includes(filter) || filter === "")
+				.filter((f) => f.gender.includes(gender)).length} results `}
+				{/* ***Counts results**** */}
 			{names
 				.filter((f) => f.name.includes(filter) || filter === "")
 				.filter((f) => f.gender.includes(gender))
